@@ -3,6 +3,8 @@ import java.util.List;
 import java.util.Random;
 
 public class RandomPermutations {
+    private Random r = new Random(); // to appease testing, although we re-init it for each new permutation
+    
 	/**
 	 * O(n) to generate a random permutation
 	 * 
@@ -14,6 +16,7 @@ public class RandomPermutations {
 	 */
 	public List<?> getPermutation(List<?> items) {
 		int[] resultIndex = new int[items.size()];
+        r = new Random();
 		for (int i = 0; i < items.size(); i++) {
 			resultIndex[i] = i;
 		}
@@ -57,7 +60,6 @@ public class RandomPermutations {
 			return end;
 		}
 		int result = -1;
-		Random r = new Random();
 		while (result < start) {
 			result = r.nextInt(end);
 		}

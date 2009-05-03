@@ -10,6 +10,8 @@ public class SelectionSort implements ISort {
 	public int[] sort(final int[] a) {
 		int[] r = Arrays.copyOf(a, a.length);
 
+		// take curr, call it min, then walk fwd, and find smaller, in which case, swap
+		// O(n^2) on sorted arrays
 		for (int i = 0; i < r.length; i++) {
 			int min = i;
 			for (int j = i; j < r.length; j++) {

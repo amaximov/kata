@@ -15,6 +15,7 @@ public class ArraysBasics {
 		return new int[][] {};
 	}
 
+	// write the rows of A as columns of At
 	public int[][] transpose(int[][] a) {
 		int[][] r = new int[a[0].length][a.length];
 		for (int i = 0; i < r.length; i++) {
@@ -23,14 +24,6 @@ public class ArraysBasics {
 			}
 		}
 		return r;
-	}
-
-	public int[] insertionSort(int[] a) {
-		return a;
-	}
-
-	public int[] selectionSort(int[] a) {
-		return a;
 	}
 
 	public int[] bubbleSort(int[] a) {

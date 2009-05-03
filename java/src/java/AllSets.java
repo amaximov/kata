@@ -21,6 +21,7 @@ public class AllSets {
 		} else {
 			step++;
 
+			// we only have two candidates for next step: either it appears in the solution or not
 			for (boolean include : new boolean[] { true, false }) {
 				solutionIndex.set(step, include);
 				backtrack(solutionIndex, step);
